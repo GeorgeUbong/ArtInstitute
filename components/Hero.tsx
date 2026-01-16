@@ -1,6 +1,6 @@
 "use client"
-import Lucide, { Icon, ArrowBigUp } from "lucide-react";
-import {Menu} from "lucide-react";
+
+import {MoveUpRight} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -35,12 +35,12 @@ export default function Hero() {
       "
     >
       Gallery
-      <ArrowBigUp size={32} />
+      <MoveUpRight size={32} />
     </button>
   </Link>
 
   <div className="mt-12 relative">
-    <div className="absolute inset-0 bg-black/10 rounded-2xl blur-2xl"></div>
+   
 
     <Image
       src={img}
@@ -50,7 +50,6 @@ export default function Hero() {
       className="
         relative
         rounded-2xl
-        shadow-2xl
         object-cover
       "
       priority

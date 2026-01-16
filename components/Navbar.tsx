@@ -13,7 +13,7 @@ export default function Nav() {
       <Link href="/answers">
       <button className='bg-black text-white p-5 hover:bg-gray-800 font-bold text-xl'>
         See me
-        <Bird size={20} className="inline-block mr-2" />
+        <Bird size={20} className="inline-block mr-3" />
       </button>
       </Link>
     </nav>
