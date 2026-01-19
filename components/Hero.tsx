@@ -32,6 +32,7 @@ export default function Hero() {
         hover:scale-105
         active:scale-95
         shadow-lg
+        cursor-pointer
       "
     >
       Gallery
@@ -39,7 +40,7 @@ export default function Hero() {
     </button>
   </Link>
 
-  <div className="mt-12 relative">
+  <div className="mt-10 relative">
    
 
     <Image

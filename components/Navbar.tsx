@@ -11,7 +11,8 @@ export default function Nav() {
       </h2>
  
       <Link href="/answers">
-      <button className='bg-black text-white p-5 hover:bg-gray-800 font-bold text-xl'>
+      <button className='bg-black text-white p-3 hover:bg-gray-800 font-bold text-xl 
+       active:scale-95 hover:scale-105'>
         See me
         <Bird size={20} className="inline-block mr-3" />
       </button>
