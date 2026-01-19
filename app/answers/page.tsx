@@ -17,11 +17,11 @@ export default function Answers() {
     const refetchTime = 6*60*60*1000; //six hours variable
     const [elapsed, setElapsed] = useState(''); //for the estimated time
     const [selectedImage, setSelectedImage] = useState<Arts | null>(null);
-    
-    
+
+
 
   //new api hook
-  const fetchArt = async (page: number) => {
+    const fetchArt = async (page: number) => {
     setLoading(true);
     try {
         const response = await fetch(
@@ -29,7 +29,7 @@ export default function Answers() {
         );
         const data = await response.json();
         setArt(data.data);
-        
+
     } catch (error){
         console.error('error ', error);
     } finally {
@@ -95,20 +95,21 @@ export default function Answers() {
                 {/**Images */}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2
-                
-                lg:grid-cols-4 gap-6">
+                                lg:grid-cols-4 gap-6">
                     {art.map((artwork) => (
                     <div key={artwork.id}
                     onClick={() => setSelectedImage(artwork)}
-                    className="bg-white rounded-lg border border-gray-400 p-4 flex flex-col"
+                    className="bg-white rounded-lg border
+                    hover:cursor-pointer
+                    hover:shadow-2xl
+                    border-gray-400 p-4 flex flex-col"
                     >
                         {artwork.image_id && (
     <img
         src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/600,/0/default.jpg`}
         alt={artwork.title}
             className="w-full h-[300px] object-cover rounded-m
-            hover:cursor-pointer
-                hover:shadow-2xl"
+            "
             loading="lazy"
         />
     )}
