@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import React, { useState, } from 'react';
 import Link from "next/link";
+import Image from "next/image";
 import ImageModal from "@/components/ImageModal";
 
 interface Arts {
@@ -105,13 +106,14 @@ export default function Answers() {
                     border-gray-400 p-4 flex flex-col"
                     >
                         {artwork.image_id && (
-    <img
+
+        <Image 
         src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/600,/0/default.jpg`}
-        alt={artwork.title}
-            className="w-full h-[300px] object-cover rounded-m
-            "
-            loading="lazy"
-        />
+         alt={artwork.title} className="w-full h-[300px] object-cover rounded-md" 
+         loading="lazy"
+         width={200}
+         height={200}
+         unoptimized={true} />
     )}
     <p className="font-semibold mb-2 text-center">{artwork.title.slice(0, 40)}</p>
                     </div>
